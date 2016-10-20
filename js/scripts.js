@@ -1,8 +1,6 @@
 $(function() {
   var liters, firstNumber, secondNumber, result, tablespoons, ounces;
-  var operator = $("input.operator").click(function() {
-    operator =  $(this).val();
-  });
+
 
   var calculate = function(firstNumber, secondNumber) {
     if(operator === "+") {
@@ -29,6 +27,10 @@ $(function() {
     ounces = (pints * 16);
   };
 // begin front end logic
+
+var operator = $("input.operator").click(function() {
+  operator =  $(this).val();
+});
 
   $("form#calculator").submit(function(event) {
     var firstNumber = parseInt($("input#firstNumber").val());
